@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  background-color: black;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.installer {
+  position: fixed;
+  top: 12%;
+  bottom: 12%;
+  left: 20%;
+  right: 20%;
+
+  background-color: white;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  text-align: center;
+
+  padding: 15px;
+
+}
+
+.installer .step {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+}
+
+.installer .bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-color: transparent;
+
+  border-top: 1px solid gray;
+
+  height: 50px;
+}
+
+.installer .btn {
+  display: inline-block;
+  height: 36px;
+  font-size: 16px;
+  font-weight: 500;
+  outline: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 36px;
+  color: #7630FF;
+  border: none;
+  border-radius: 2px;
+  padding: 0 16px;
+  margin: 0;
+  position: absolute;
+  bottom: 7px;
+  transition-duration: 0.3s;
+}
+
+.next {
+  right: 10px;
+}
+
+.back {
+  left: 10px;
+  visibility: hidden;
+}
+
+.installer .btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.installer .content {
+  position: absolute;
+  bottom: 50px;
+  top: 100px;
+  left: 0;
+  right: 0;
+}
+
+.center {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .installer {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0px;
+    padding: 40px;
+  }
+}

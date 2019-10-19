@@ -1,0 +1,12 @@
+.welcome-logo {
+  width: 40%;
+  margin: 40px;
+}
+
+@media (max-width: 1600px) {
+  .welcome-logo {
+    width: 250px;
+    margin: 20px;
+  }
+}
+
