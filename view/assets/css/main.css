@@ -1,99 +1,187 @@
 body {
   margin: 0;
-  background-color: black;
+  overflow: hidden;
+  user-select: none;
+
+  background: url(/Indigo/storage/wallpapers/wallpaper.jpg) no-repeat center fixed;
+  background-size: cover;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 
-.installer {
-  position: fixed;
-  top: 12%;
-  bottom: 12%;
-  left: 20%;
-  right: 20%;
+/* INSTALLER FRAME */
 
-  background-color: white;
-  border-radius: 5px;
-  box-sizing: border-box;
-
-  text-align: center;
-
-  padding: 15px;
-
-}
-
-.installer .step {
-  position: absolute;
-  top: 20px;
-  left: 40px;
-}
-
-.installer .bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  background-color: transparent;
-
-  border-top: 1px solid gray;
-
-  height: 50px;
-}
-
-.installer .btn {
-  display: inline-block;
-  height: 36px;
-  font-size: 16px;
-  font-weight: 500;
-  outline: 0;
-  text-decoration: none;
-  text-transform: uppercase;
-  line-height: 36px;
-  color: #7630FF;
-  border: none;
-  border-radius: 2px;
-  padding: 0 16px;
+h1 {
   margin: 0;
-  position: absolute;
-  bottom: 7px;
-  transition-duration: 0.3s;
+  margin-top: 15px;
+  margin-left: 15px;
 }
 
-.next {
-  right: 10px;
-}
-
-.back {
-  left: 10px;
-  visibility: hidden;
-}
-
-.installer .btn:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.installer .content {
-  position: absolute;
-  bottom: 50px;
-  top: 100px;
-  left: 0;
-  right: 0;
-}
-
-.center {
+.installer {
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
+
+  width: 900px;
+  height: 600px;
+
+  border-radius: 8px;
+}
+
+.installer .content {
+  width: 850px;
+  height: 415px;
+  margin: 25px;
   text-align: center;
 }
 
-@media (max-width: 1024px) {
+.mdl-card__title h1 {
+  font-weight: 600;
+}
+
+.mdl-card__actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.step {
+  visibility: hidden;
+  width: 100%;
+}
+
+.active {
+  visibility: visible !important;
+}
+
+@media (max-width: 930px) {
   .installer {
+    transform: none;
+    border-radius: 0;
+
+    position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
-    border-radius: 0px;
-    padding: 40px;
+    bottom: 40px;
+    width: 100%;
+    height: auto;
+
+    box-shadow: none;
   }
+
+  .installer .content {
+    width: 90%;
+    height: 100%;
+    margin: 5%;
+  }
+}
+
+/* WELCOME */
+
+#welcome {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#welcome .logo {
+  width: 60%;
+  margin: 20px;
+  margin-top: 0;
+}
+
+#welcome h1 {
+  font-size: 50px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+@media (max-width: 930px) {
+  #welcome h1 {
+    font-size: 40px;
+  }
+}
+
+/* INTERNET */
+
+#internet {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#internet img {
+  width: 400px;
+}
+
+.wifis {
+  background-color: rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  width: 300px;
+  max-height: 450px;
+  overflow: auto;
+}
+
+
+#internet .wifis .ap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 92%;
+  margin: 4%;
+  background-color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#internet .wifis .ap #wifi-icon {
+  margin-left: 20px;
+}
+
+#internet .wifis .ap #wifi-ssid {
+  margin-right: 20px;
+}
+
+#internet .wifis .ap .pass {
+  display: none;
+  align-items: center;
+  margin-left: 28px;
+  margin-right: 28px;
+  width: 220px;
+}
+
+#internet .wifis .ap .pass .mdl-textfield {
+  margin-right: 20px;
+}
+
+#internet .wifis .ap .pass #connect {
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 50%;
+}
+
+@media (max-width: 930px) {
+  #internet img {
+    display: none;
+  }
+}
+
+/* KEYBOARD */
+
+#keyboard {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* USER */
+
+#user {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
 }

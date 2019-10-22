@@ -1,0 +1,36 @@
+.computer {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  min-width: 80px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition-duration: 0.2s;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.computer i {
+  margin-top: 7px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+@media (max-width: 930px) {
+  .computer {
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    border-radius: 0;
+    justify-content: left;
+    padding-left: 10px;
+  }
+}

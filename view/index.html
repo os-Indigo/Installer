@@ -5,32 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Indigo</title>
 
+  <link rel="stylesheet" href="./assets/fonts/material-icons.css">
+  <link rel="stylesheet" href="./assets/css/material.min.css">
+
+  <link rel="stylesheet" href="./assets/css/infos.css">
+  <link rel="stylesheet" href="./assets/css/computer.css">
   <link rel="stylesheet" href="./assets/css/main.css">
-  <link rel="stylesheet" href="./assets/css/welcome.css">
 </head>
 <body>
 
-  <div class="installer">
-    <h1 class="step"></h1>
+  <div class="installer mdl-card mdl-shadow--2dp">
 
+    <div class="mdl-card__title">
+      <h1>INSTALLER</h1>
+    </div>
     <div class="content">
-      <div class="center">
-        <div class="internet-list">
-          <div class="internet-item">
-            <h6>Livebox-2FE2</h6>
-          </div>
-        </div>
+
+      <!-- WELCOME -->
+      <div class="step active" id="welcome" step="0">
+        <img class="logo" src="/Indigo/storage/assets/logos/Indigo-logo-text.svg">
+        <h1>WELCOME !</h1>
+      </div>
+
+      <!-- INTERNET -->
+      <div class="step" id="internet" step="1">
+        
+        <img src="/Indigo/storage/assets/illustrations/world.svg" alt="">
+        <div class="wifis">
+          <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+        </div>        
+      </div>
+
+      <!-- KEYBOARD -->
+      <div class="step" id="keyboard" step="2">
+        KEYBOARD
+      </div>
+
+      <!-- USER -->
+      <div class="step" id="user" step="3">
+        USER
       </div>
     </div>
-
-    <div class="bar">
-      <a href="#" onclick="nextStep()" class="btn next">Next</a>
-      <a href="#" onclick="backStep()" class="btn back">Back</a>
+    <div class="mdl-card__actions mdl-card--border">
+      <a id="back-btn" onclick="steps.back()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Back</a>
+      <a id="next-btn" onclick="steps.next()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Next</a>
     </div>
-
   </div>
-  
-  <script src="./assets/js/steps/index.js"></script>
+
+  <div class="infos">
+    <h3 class="infos-time">16 : 02</h3>
+  </div>
+
+  <div class="computer">
+    <i id="shutdown-btn" class="material-icons">power_settings_new</i>
+    <i id="reboot-btn" class="material-icons">autorenew</i>
+  </div>
+
+  <script src="./assets/js/material.min.js"></script>
+  <script src="./assets/js/steps.js"></script>
+  <script src="./assets/js/wifi.js"></script>
 
 </body>
 </html>

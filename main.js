@@ -7,12 +7,10 @@ const createMainWindow = () => {
   const w = screen.getAllDisplays()[0]
 
   window = new BrowserWindow({
-    //frame: false,
+    frame: false,
     resizable: false,
-    width: 1880, //w.size.width,
-    height: 980, //w.size.width,
-    //x: w.bounds.x,
-    //y: 0,
+    width: w.bounds.width,
+    height: w.bounds.height,
     webPreferences: {
       nodeIntegration: true
     }
